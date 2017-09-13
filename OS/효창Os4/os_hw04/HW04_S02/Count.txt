@@ -1,0 +1,31 @@
+4648 : Take_R1, Time : Fri Apr 15 20:42:55 2016
+4648 : Take_R2, Time : Fri Apr 15 20:42:55 2016
+4648 : Take_R3, Time : Fri Apr 15 20:42:55 2016
+4648 : Thinking....
+4647 : R1_waiting...., Time : Fri Apr 15 20:42:55 2016
+4648 : Eating!!!!
+4648 : Put_R1, Time : Fri Apr 15 20:42:57 2016
+4648 : Put_R2, Time : Fri Apr 15 20:42:57 2016
+4648 : Put_R3, Time : Fri Apr 15 20:42:57 2016
+4648 : Finish Eating
+4647 : wack up!!!, Time : Fri Apr 15 20:42:57 2016
+4647 : Take_R1, Time : Fri Apr 15 20:42:57 2016
+4647 : Take_R2, Time : Fri Apr 15 20:42:57 2016
+4647 : Take_R3, Time : Fri Apr 15 20:42:57 2016
+4647 : Thinking....
+4646 : R1_waiting...., Time : Fri Apr 15 20:42:57 2016
+4647 : Eating!!!!
+4647 : Put_R1, Time : Fri Apr 15 20:42:59 2016
+4647 : Put_R2, Time : Fri Apr 15 20:42:59 2016
+4647 : Put_R3, Time : Fri Apr 15 20:42:59 2016
+4647 : Finish Eating
+4646 : wack up!!!, Time : Fri Apr 15 20:42:59 2016
+4646 : Take_R1, Time : Fri Apr 15 20:42:59 2016
+4646 : Take_R2, Time : Fri Apr 15 20:42:59 2016
+4646 : Take_R3, Time : Fri Apr 15 20:42:59 2016
+4646 : Thinking....
+4646 : Eating!!!!
+4646 : Put_R1, Time : Fri Apr 15 20:43:01 2016
+4646 : Put_R2, Time : Fri Apr 15 20:43:01 2016
+4646 : Put_R3, Time : Fri Apr 15 20:43:01 2016
+4646 : Finish Eating

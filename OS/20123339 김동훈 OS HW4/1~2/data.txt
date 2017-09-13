@@ -1,0 +1,21 @@
+trying take chopstick 'R2'// 14416 // Tue Apr 19 01:18:46 2016
+14416 // takes chopstick  // time is Tue Apr 19 01:18:46 2016
+ThinkING??
+trying take chopstick 'R1'// 14414 // Tue Apr 19 01:18:46 2016
+14414 // takes chopstick  // time is Tue Apr 19 01:18:46 2016
+ThinkING??
+trying take chopstick 'R2'// 14415 // Tue Apr 19 01:18:46 2016
+14415 // takes chopstick  // time is Tue Apr 19 01:18:46 2016
+ThinkING??
+trying take chopstick 'R1'// 14416 // Tue Apr 19 01:18:47 2016
+ 14416 //  waiting~~ chopstick 'R1' // time is Tue Apr 19 01:18:47 2016
+14416 //  Wake up!! // time is Tue Apr 19 01:18:47 2016
+ 14416 //  waiting~~ chopstick 'R1' // time is Tue Apr 19 01:18:47 2016
+trying take chopstick 'R2'// 14414 // Tue Apr 19 01:18:47 2016
+ 14414 // waiting~~ chopstick 'R2 // time is Tue Apr 19 01:18:47 2016
+14414 //  Wake up!! // time is Tue Apr 19 01:18:47 2016
+ 14414 // waiting~~ chopstick 'R2 // time is Tue Apr 19 01:18:47 2016
+trying take chopstick 'R2'// 14415 // Tue Apr 19 01:18:47 2016
+ 14415 // waiting~~ chopstick 'R2 // time is Tue Apr 19 01:18:47 2016
+14415 //  Wake up!! // time is Tue Apr 19 01:18:47 2016
+ 14415 // waiting~~ chopstick 'R2 // time is Tue Apr 19 01:18:47 2016

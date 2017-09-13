@@ -1,0 +1,9 @@
+5163 : Take_R1, Time : Fri Apr 15 20:56:50 2016
+5164 : Take_R2, Time : Fri Apr 15 20:56:50 2016
+5163 : Thinking....
+5165 : Take_R3, Time : Fri Apr 15 20:56:50 2016
+5165 : Thinking....
+5164 : Thinking....
+5163 : R2_waiting...., Time : Fri Apr 15 20:56:51 2016
+5165 : R1_waiting...., Time : Fri Apr 15 20:56:51 2016
+5164 : R3_waiting...., Time : Fri Apr 15 20:56:51 2016

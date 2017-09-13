@@ -1,0 +1,25 @@
+5288 : Take_R1, Time : Fri Apr 15 20:58:33 2016
+5288 : Thinking....
+5289 : Take_R2, Time : Fri Apr 15 20:58:33 2016
+5289 : Thinking....
+5290 : R1_waiting...., Time : Fri Apr 15 20:58:33 2016
+5288 : R2_waiting...., Time : Fri Apr 15 20:58:34 2016
+5289 : Take_R3, Time : Fri Apr 15 20:58:34 2016
+5289 : Eating!!!!
+5289 : Put_R2, Time : Fri Apr 15 20:58:35 2016
+5289 : Put_R3, Time : Fri Apr 15 20:58:35 2016
+5289 : Finish Eating
+5288 : wack up!!!, Time : Fri Apr 15 20:58:35 2016
+5288 : Take_R2, Time : Fri Apr 15 20:58:35 2016
+5288 : Eating!!!!
+5288 : Put_R1, Time : Fri Apr 15 20:58:36 2016
+5288 : Put_R2, Time : Fri Apr 15 20:58:36 2016
+5288 : Finish Eating
+5290 : wack up!!!, Time : Fri Apr 15 20:58:36 2016
+5290 : Take_R1, Time : Fri Apr 15 20:58:36 2016
+5290 : Thinking....
+5290 : Take_R3, Time : Fri Apr 15 20:58:37 2016
+5290 : Eating!!!!
+5290 : Put_R1, Time : Fri Apr 15 20:58:38 2016
+5290 : Put_R3, Time : Fri Apr 15 20:58:38 2016
+5290 : Finish Eating
