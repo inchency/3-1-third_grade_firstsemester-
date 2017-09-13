@@ -1,0 +1,64 @@
+Prolog 인터프리터 - http://www.swi-prolog.org/
+
+
+
+
+- Prolog Tutorial
+
+   https://www.cpp.edu/~jrfisher/www/prolog_tutorial/1.html
+
+
+
+
+- Program loading and exit.
+
+  ?- ['test.pl'].      /* Load a program from a local file */
+
+  ?- halt.    /* exit */
+
+
+
+
+- Example 1  프리디킷 (lisp에서 함수라하던거)
+
+len([], 0).
+len([_|T], L) :- len(T, N), L is N+1.
+car 대문자는 변수 소문자는 상수
+어떤리스트가 있는데 _ <- 이름없는 변수 그것의 길이는 L이다  :- 조건을 만족해야함 (T의 길이는 N이다. and L은 N+1이다.)
+
+
+
+reverse([], []).
+reverse([H|T], R) :- reverse(T, L), append(L, [H], R).
+reverse라는 정의를 내린것임. append는 너무 기본적이라 기본적으로 주어진거
+:-  조건       , 조건 , 조건,조건.  .꼭필요 ,는 and 조건 즉 ,사이의 조건 다 만족하면 :-전꺼
+[]의 reverse는 []이다. 선언
+아닌경우
+맨 첫번째거의 헤드 T의 rever가 L이고 
+
+
+member(Element, [Element | _]) :- !.
+member(Element, [_ | List]) :- member(Element, List).
+
+
+
+
+- Example 2
+
+%% This is a comment line.
+male(bill). bill 이란 사람은 남자다
+male(jake).
+female(mary). mary 소문자인 이유는 상수이기 때문!!
+female(shelley).
+
+father(bill, jake).
+father(bill, shelley).
+mother(mary, jake).
+mother(mary, shelley).
+
+ancestor(marry, shelley) :- mother(mary, shelley).
+
+parent(X, Y) :- mother(X, Y).
+parent(X, Y) :- father(X, Y).
+grandparent(X, Z) :- parent(X, Y), parent(Y, Z).
+sibling(X, Y) :- mother(M, X), mother(M, Y), father(F, X), father(F, Y).

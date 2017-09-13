@@ -1,0 +1,91 @@
+gcc -c test.c   -> test.o
+gcc -o test test.o   - > test 실행파일 생김
+gcc -o test test.c -> 한번에 컴파일
+
+main :	main.o test.o
+	gcc -o main main.o test.o
+main.o :	main.c test.h
+		gcc -c main.c
+test.o :	test.c test.h
+		gcc -c test.c
+
+
+
+
+
+
+
+
+
+makefile -1
+all:
+	g++ main.cpp hello.cpp fact.cpp -o hello
+
+makefile -2
+hello.exe: make.o hello.o fact.o
+	g++ main.o hello.o fact.o -o hello
+main.o : main.cpp
+	g++ -c main.cpp
+hello.o : hello.cpp
+	g++ -c hello.cpp
+fact.o : fact.cpp
+	g++ -c fact.cpp
+
+clean:
+	del *.o hello.exe
+
+A.cpp
+B.cpp
+C.cpp 가 있다고 가정해 보자
+그러면
+원래 각각은
+g++ -o A A.cpp
+g++ -o B B.cpp
+g++ -o B B.cpp
+or
+g++ A.cpp B.cpp C.cpp -o K -> 세개 cpp가 컴파일되어서 K 실행파일이 만들어짐
+하면 됨 근데 매우 귀찮...
+그래서 나온게 Makefile
+1번쨰 Makefile 방법
+
+all:
+	g++ A.cpp B.cpp C.cpp -o K
+
+2번째 Makefile 방법
+K.exe :
+	g++ A.o B.o C.o -o K
+A.o : A.cpp
+	g++ -c A A.cpp       (g++ -c A.cpp 해도 똑같은 결과가 나오나??)
+B.o : B.cpp
+	g++ -c B B.cpp
+C.o : C.cpp
+	g++ -c C C.cpp
+clean :
+	del *.o K.exe
+
+
+3번쨰 Makefile 방법 변수를 활용하자
+CC = g++
+CFLAGS = -c -Wall
+
+all :
+	$(CC) A.cpp B.cpp C.cpp -o K
+
+A.o: A.cpp
+	$(CC) $(CFLAGS) A.cpp
+B.o: B.cpp
+	$(CC) $(CFLAGS) B.cpp
+B.o: C.cpp
+	$(CC) $(CFLAGS) C.cpp
+clean:
+	del *.o K.exe
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+gcc - c c파일  object파일로 컴파일함
+
+gcc - c test.c -> test.o파일
+
+gcc -o test test.o ->test 라는 이름의 실행파일 생성
+
+gcc -o test test.c -> 한번에 컴파일
+
+gcc -S test.c 어셈블리어로 컴파일
+
+
+
+test.h
+void test();
+
+test.c
+#include <stdio.h>
+#include "test.h"
+void test()
+{
+	printf("START\n");
+}
+
+main.c
+#include <stdio.h>
+#include "test.h"
+main()
+{
+	test();
+}
+
+이렇게 있다고 하자
+원래는
+gcc -c main.c
+gcc -c test.c
+ls
+main.c main.o test.c test.c~ test.h test.o
+gcc -o main.o test.o
+ls
+main main.c main.o test.c test.c~ test.h test.o
+gcc -o main2 main.c test.c
+ls
+main main.c main.o main2 test.c test.c~ test.h test.o
+./main
+START 출력
+
+이건데 파일갯수 늘어날수록 힘들어짐 즉 makefile 만듬
+makefile 을 vi에디터로 편집하던 gedit 편집
+main:   main.o test.o
+	gcc -o main.o test.o
+main.o :main.c test.h
+	gcc -c main.c
+test.o :test.c test.h
+	gcc -c test.c
+이렇게 만들어 둔 후
+
+ls
+Makefile main.c test.c test.c~ test.h    요렇게 나올것이다
+gedit Makefile
+make       하면
+gcc -c main.c
+gcc -c test.c
+gcc -o main main.o tset.o
+ls
+Makefile main main.c main.o tset.c test.c~ test.h test.o
+./main
+START 출력
+끝
+
+출처
+
+http://blog.naver.com/hyuny9641?Redirect=Log&logNo=220551264049

@@ -1,0 +1,85 @@
+/*******************************************************************************
+ÀÌ¸§ : ±èµ¿ÈÆ
+ÇÐ¹ø : 20123339
+ID : LAB5 Stack And Queue Practice
+date : 2016-04-6
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+#include "StackandQ.h"
+#define STACK_SIZE 2
+#define QUEUE_SIZE 3
+
+using namespace std;
+
+Stack S(STACK_SIZE);
+Queue Q(QUEUE_SIZE);
+
+
+int main() {
+	string str;
+	char a;
+	string b;
+	cout << "Please input data push a-> enque b-> enque c-> enque d-> push e" << endl;
+	while (1) {
+		cin >> str;
+		if (str == "push") {
+			cin >> a;
+			S.push(a);
+			//cout << "push " << a << endl;
+		}
+		else if (str == "pop") 
+			cout << S.pop() << endl;
+		else if (str == "enque" || str == "enqueue") {
+			cin >> a;
+			Q.AddQ(a);
+			//cout << "enque " << a << endl;
+		}
+		else if (str == "deque" || str == "dequeue") 
+			cout << Q.DeleteQ() << endl;
+		else if (str == "display") {
+			cin >> b;
+			if (b == "Stack")
+				S.print();
+			else if (b == "Queue")
+				Q.Print();
+			else
+				cout << "Error, Retry!" << endl;
+		}
+	}
+}
+
+/*
+int main() {
+	string cmd, type;
+	cout << "Please input data push a-> enque b-> enque c-> enque d-> push e" << endl;
+	while (1) {
+		cin >> cmd;
+		if (cmd == "push") {
+			cin >> type;
+			S.push(type.at(1));
+		}
+		else if (cmd == "enque" || cmd == "enqueue") {
+			cin >> type;
+			Q.AddQ(type.at(1));
+		}
+		else if (cmd == "pop")
+			cout << S.pop() << endl;
+		else if (cmd == "dequeue")
+			cout << Q.DeleteQ() << endl;
+		else if (cmd == "display") {
+			cin >> type;
+			if (type == "Stack") {
+				S.print();
+			}
+			else if (type == "Queue") {
+				Q.Print();
+			}
+		}
+		else
+			cout << "Error" << endl;
+	}
+}
+
+*/

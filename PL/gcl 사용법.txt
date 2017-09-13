@@ -1,0 +1,165 @@
+gcl
+
+> (car '(this is a list))
+THIS
+첫번째꺼 나옴
+
+>(cdr '(this is a list))
+(IS A LIST)
+첫번째꺼 제외하고 나옴
+
+>> (setq a 100)
+
+100
+>>(setq b 200)
+
+200
+>>(+ a b)
+
+300
+>>(+ 100 200)
+
+300
+>>a
+
+100
+>>'a
+
+A
+>>'abc
+
+ABC
+>>(quote a)
+
+A
+
+quote 함수 원래 덧셈 ab 하면 원래 더하는데 quote는 값을 가져오는 것이 아니라 그거 자체로 출력하는 함수이다. = '
+(quote abc) = 'abc
+
+>>(setq a 400)
+400
+
+>>(set (quote a) 400)
+400
+
+>>a
+400
+
+>>(set 'a 400)
+400
+
+>>(set 'a 1000)
+1000
+
+>>a
+1000
+
+>>(setq a 2000)
+2000
+
+>>(+ 1 2 3 4 5)
+15
+
+>>(- 100 10 30 50)
+10
+
+>>(- 100 10 30 40)
+20
+
+>>(- 100 (+10 30) 40)
+20
+
+>>(- 100 (*10 3) 40)
+30
+
+>>(setq x 50)
+50
+
+>>(setq y 7)
+7
+
+>>y
+7
+
+>>(+ x y)
+57
+
+>>(car '(a b c d))
+A
+
+>>(car (a b c d))
+Error메세지 나옴 ~ Broken at EVAL
+
+>>(car (quote (a b c d)))
+A
+
+>>(car '(a b c d))
+A
+
+>>'(car '(a b c d))
+(CAR '(A B C D))
+
+>>(setq a '(car '(a b c d)))
+(CAR '(A B C D))
+
+>>a
+(CAR '(A B C D))
+
+>>(eval a)
+A
+
+>>(setq b '(cdr '(a b c d)))
+(CDR '(A B C D)
+
+eval은 계산은 해주는 함수인듯?
+
+>>(lambda (x y) (+ x y))
+(LAMBDA-CLOSURE () () () (X Y) (+ X Y))
+
+>>((lambda (x y) (+ x y)) 100 200)
+300
+
+>>(defun add(x y) (+ x y))
+ADD
+
+>>(add 100 200)
+300
+
+Broken at CAR.
+>>(setq a '(a b c d e))
+
+(A B C D E)
+>>a
+
+>>(atom 'a)
+
+T
+>>(atom a)
+
+NIL
+
+>>nil
+
+NIL
+
+>>(atom ())
+
+T
+>>(atom ())
+
+T
+>>(atom nil)
+
+T
+>>()
+
+NIL
+>>(list 'a 'b 'c)
+
+(A B C)
+
+lisp에서는 반복문이 기본이 아니라 recursive가 기본이다. 그런데 recursive로 하면 프로그랢 구현이 어려우므로
+반복문이 있긴 있으나 잘 쓰진 않는다. 그래서 do문을 pl 시간에 do를 쓰진 않을 것이다. (반복문)
+조건문에는 IF를 써왔으니 cond 라는 조건문도 있다. 
+
+(load "test2.lsp") 해당 디렉토리 내에서 lsp파일 열기

@@ -1,0 +1,2 @@
+속성에서 디버깅 포트번호, Chatc는 cmd들어가서 ipconfig ipv4 주소 입력 + 포트번호
+링커 입력 편집 ws2_32.lib

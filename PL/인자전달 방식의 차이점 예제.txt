@@ -1,0 +1,49 @@
+인자전달 방식의 차이점 예제
+1) call by value-result
+값을 copy 해줘야함
+A[1] = 1
+int x에서 x=1
+p(1)
+i=i+1에서 1->2 (전역변수임)
+x=x+1에서 1->2 (지역변수임)
+그렇다면
+p(A[1])인가 p(A[2])인가??
+둘중에 하나로 될거임.. 뭔지는 컴파일러 구현한사람 마음
+
+2) call by reference
+i    1->2
+A[1] 1->2
+A[2] 2
+
+3) call by name
+A[i] - > x
+i=i+1;
+x=x+1자리에
+x대신
+A[i] 넣는다.
+A[i] = A[i]+1
+2->3
+
+2번째 예제
+i->x
+A[i]->y
+1) call by value-result
+x 파라메터 2 - > 99
+y 파라메터 99 -> 2
+temp 지역변수 2
+x->i
+y->A[i]
+아까랑 똑같은 문제 발생
+
+2) call by reference
+x -> i
+y -> A[2]
+temp = 2
+i 2->99
+A[2] 99->2
+
+3) call by name
+tmp = x;   x->i
+x=y;    i->A[i]   2->99
+y=tmp;   A[i] ->tmp  A[99]=2
+문제있음

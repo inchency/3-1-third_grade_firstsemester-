@@ -1,0 +1,41 @@
+MYSQL Workbench
+database
+root 계정으로 로그인
+
+
+DDL은 릴레이션 스키마 생성, 수정삭제
+DML은 튜플 생성 수정 삭제 검색 (릴레이션 인스턴스)
+SELECT 속성(컬럼)들 * FROM table 이름
+	프로젝트
+
+WHERE 속성값 조건
+	Select 6 연산과 같음
+
+튜플생성 INSERT
+튜플수정 UPDATE
+튜플삭제 DELETE            위 세가지는 executeUpdate() 사용하면됨
+검색	 SELECT		   executeQuery()
+
+UPDATE table이름 SET 속성(컬렘)=속성값
+WHERE 생략할수는 있지만 생략하면 위험함( 모든 튜플들에 대해서 바뀌기 때문에)
+DELETE FROM 테이블이름 (WHERE 조건절) 생략가능 생략하면 테이블안에 존재하는 모든 튜플 삭제됨
+
+1. JDBC 드라이버를 로드해야함
+
+Object - toString()
+	 equals()
+	  clone()
+	  finalize() - 소멸자 역할
+	  getclass() - 데이터(필드)와 기능(메소드)을 정의  -> class
+Class.forName
+
+2. 데이터베이스와 연결해야함
+데이터베이스의 URL
+jdbcmysql://219.153.12.14:3306/maldb
+(protocol)(subprotocol)IP주소:포트번호/DB이름
+
+Exception - uncheced : try catch 하지 않아도 컴파일 에러 안남
+	    checked : ex)Exception  try catchx -> compile error
+
+3. 테이블의 데이터를 읽어와야함
+Statement stmt = conn.createStatement();
